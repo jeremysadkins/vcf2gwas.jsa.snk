@@ -30,7 +30,8 @@ if (!is.na(args$highlight_snps)) {
 
 gwas = read_tsv(args$assoc_file) %>%
     rename(pval={!!args$pval}) %>%
-    mutate(highlight=rs %in% highlighted) %>%
+    #mutate(highlight=rs %in% highlighted) %>%
+    mutate(highlight=pval<0.05/n()) %>%
     arrange(highlight, chr, ps) %>%
     glimpse()
 

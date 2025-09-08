@@ -209,10 +209,11 @@ rule lmm:
 rule plotr:
     input:
         assoc=WD("out/{pheno}.assoc.txt"),
+        script="scripts/plot_gemma.R",
     output:
         assoc=WD("out/{pheno}.manhattan.png"),
     shell:
-        "Rscript scripts/plot_gemma.R --output {output} {input}"
+        "Rscript {input.script} --output {output} {input.assoc}"
 
 rule heritability_table:
     input:
