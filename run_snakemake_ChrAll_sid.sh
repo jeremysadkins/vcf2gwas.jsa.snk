@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=WholeGenomeGWAS_resid_filter		                    # Job name
+#SBATCH --job-name=WholeGenomeGWAS_resid_filter_sid		                    # Job name
 #SBATCH --partition=bothwell_p		                        # Partition (queue) name
 #SBATCH --ntasks=1			                            # Single task job
 #SBATCH --cpus-per-task=28		                        # Number of cores per task
