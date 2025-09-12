@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=WholeGenomeGWAS		                    # Job name
+#SBATCH --job-name=WholeGenomeGWAS_resid_filter		                    # Job name
 #SBATCH --partition=bothwell_p		                        # Partition (queue) name
 #SBATCH --ntasks=1			                            # Single task job
 #SBATCH --cpus-per-task=28		                        # Number of cores per task
@@ -11,7 +11,7 @@
 
 set -euo pipefail
 
-cd /work/hblab/jsalab/RhizoPlate/vcf2gwas.snk
+cd /work/hblab/jsalab/RhizoPlate/vcf2gwas.jsa.snk
 
 module load BCFtools/1.21-GCC-13.3.0
 module load R
@@ -23,9 +23,9 @@ snakemake --snakefile vcf2gwas.snk --configfile configRhiz.yml -j 5 --ri
 ##########################
 # Job failed at some point and CHatGPT said the snakemake directory was locked and recommended the following:
 #  interact -p bothwell_p --cpus-per-task=28 --mem=40gb --time=6:00:00
-cd /work/hblab/jsalab/RhizoPlate/vcf2gwas.snk
-# sanity check: make sure no other Snakemake is still running
-squeue -u $USER | grep -i snakemake || true
-ps -u $USER -o pid,cmd | grep -E "[s]nakemake|[g]emma" || true
-# unlock the workflow
-snakemake --snakefile vcf2gwas.snk --configfile configRhiz.yml --unlock
+# cd /work/hblab/jsalab/RhizoPlate/vcf2gwas.snk
+# # sanity check: make sure no other Snakemake is still running
+# squeue -u $USER | grep -i snakemake || true
+# ps -u $USER -o pid,cmd | grep -E "[s]nakemake|[g]emma" || true
+# # unlock the workflow
+# snakemake --snakefile vcf2gwas.snk --configfile configRhiz.yml --unlock
