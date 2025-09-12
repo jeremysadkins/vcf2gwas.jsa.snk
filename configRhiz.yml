@@ -1,7 +1,6 @@
-phenotypes: "/work/hblab/jsalab/Paneuc/Phenotype/pheno_gwas.csv"
-vcf: "/work/hblab/jsalab/Paneuc/SNP_filtered/RhizoMerged/rhiz_adna_gor_missing_merged_ChrAll.vcf.gz"
-workdir: "/work/hblab/jsalab/Paneuc/Rhiz_GWAS/ChrAll"
+phenotypes: "/work/hblab/jsalab/Paneuc/Phenotype/Euc_roots/Genomic/pheno_gwas_residuals.tsv"
+vcf: "/scratch/jsa72906/Euc/Rhiz/Chr1_mel.S5_shared.vcf.gz"
+workdir: "/work/hblab/jsalab/Paneuc/Rhiz_GWAS_resid/Chr1_mel"
 missing_threshold: 1.0
 permutations: 0
 individual_intersection: true
-
