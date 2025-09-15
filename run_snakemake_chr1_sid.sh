@@ -16,7 +16,7 @@ cd /work/hblab/jsalab/RhizoPlate/vcf2gwas.jsa.snk
 module load BCFtools/1.21-GCC-13.3.0
 module load R
 
-snakemake --snakefile vcf2gwas.snk --configfile configRhiz_chr1.sid.yml -j 28 --ri
+snakemake --snakefile vcf2gwas.snk --configfile configRhiz_chr1_sid.yml -j 28 --ri
 
 # Python/3.12.3-GCCcore-13.3.0
 
