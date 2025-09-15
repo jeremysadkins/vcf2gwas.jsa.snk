@@ -1,0 +1,6 @@
+phenotypes: "/work/hblab/jsalab/Paneuc/Phenotype/Euc_roots/Genomic/pheno_gwas_residuals.tsv"
+vcf: "/scratch/jsa72906/Euc/Rhiz/notpiped_chr1/Chr1_sid.S5_shared.vcf.gz"
+workdir: "/work/hblab/jsalab/Paneuc/Rhiz_GWAS_resid/Chr1_sid"
+missing_threshold: 1.0
+permutations: 0
+individual_intersection: true
